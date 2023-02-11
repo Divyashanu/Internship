@@ -1,5 +1,29 @@
-jnbkjm 
-hvjhnvjhb\
+ Q1 What is the size of float and double in java?
+  Ans)Float is of size 32 bits while double is of size 64 bits.
+  
+ Q2 Automatic type conversion is possible in which of the possible cases?
+Ans) This happens when: The two data types are compatible. When we assign a value of a smaller data type to a bigger data type
+ Automatic type conversion is possible in Int to Long.
+ 
+Q3 Find the output of the following code.
+int Integer = 24;
+char String = ‘I’;
+System.out.print(Integer);
+System.out.print(String);
+Ans)
 
-hvjb\
-hbih
+
+
+Q4. Find the output of the following program.
+public class Solution{
+public static void main(String[] args){
+short x = 10;
+x = x * 5;
+System.out.print(x);
+}
+}
+Ans)x=x*5
+x=50
+but in the program x is short data type and 5 is int datatype
+it is not possible to store int value in short so
+ans Compile time error
