@@ -1,17 +1,18 @@
  Q1 What is the size of float and double in java?
   Ans)Float is of size 32 bits while double is of size 64 bits.
   
+  
  Q2 Automatic type conversion is possible in which of the possible cases?
 Ans) This happens when: The two data types are compatible. When we assign a value of a smaller data type to a bigger data type
  Automatic type conversion is possible in Int to Long.
+ 
  
 Q3 Find the output of the following code.
 int Integer = 24;
 char String = ‘I’;
 System.out.print(Integer);
 System.out.print(String);
-Ans)
-
+Ans)As the given statements are valid,output is 24I
 
 
 Q4. Find the output of the following program.
@@ -26,4 +27,143 @@ Ans)x=x*5
 x=50
 but in the program x is short data type and 5 is int datatype
 it is not possible to store int value in short so
-ans Compile time error
+ans) Compile time error
+
+
+Q5.Find the output of the following program.
+public class Solution{
+public static void main(String[] args){
+byte x = 127;
+x++;
+x++;
+System.out.print(x);
+}
+}
+Ans)As the byte data type in Java is cyclic in nature, an increment to 127 is -128,and another increment to -128 is -127(-128+1),Answer is -127.
+
+
+Q6. Select the valid statement.
+A. char[] ch = new char(5)
+B. char[] ch = new char[5]
+C. char[] ch = new char()
+D. char[] ch = new char[]
+Ans)The syntax for declaring and creating an array variable in java is:
+dataType[] arrayRefVar = new dataType[arraySize];
+
+Thus, option (A) and option (c) is syntactically wrong as parentheses( ( ) ) is used instead of square brackets( [ ] ).
+Option (D) is incorrect as the size of the array is missing.
+char[] ch = new char[5] is the correct syntax for declaring a character array.
+
+
+Q7. Find the output of the following program.
+public class Solution{
+public static void main(String[] args){
+int[] x = {120, 200, 016};
+for(int i = 0; i < x.length; i++){
+System.out.print(x[i] + “ “);
+}
+}
+}
+Ans)016 is an octal number. The prefix 0 indicates that a number is in octal.so answer is 120 200 14.
+
+
+Q8.When an array is passed to a method, what does the method receive?
+A. The reference of the array
+B. A copy of the array
+C. Length of the array
+D. Copy of first element
+Ans)You can pass arrays to a method just like normal variables. When we pass an array to a method as an argument, actually the address of the array in the memory is passed (reference). 
+Therefore, any changes to this array in the method will affect the array.
+
+
+Q9.Find the value of A[1] after execution of the following program.
+int[] A = {0,2,4,1,3};
+for(int i = 0; i < a.length; i++){
+a[i] = a[(a[i] + 3) % a.length];
+}
+A. 0
+B. 1
+C. 2
+D. 3
+Ans)when i = 0;
+a[i] = a[(a[i]+3)%a.length] //a.length =5;
+a[0] = a[(a[0]+3)%5];
+a[0] = a[(0+3)%5] ; // 3
+a[0] = a[3] = 1
+when i = 1;
+a[1]=a[(a[1]+3)%5];
+a[1]=a[(2+3)%5];
+a[1]=a[0];
+a[1]=1;
+Therefore a[1] is equal to 1
+
+
+
+Q10. When is the object created with a new keyword?
+A. At run time
+B. At compile time
+C. Depends on the code
+D. None
+Ans)The object created with a new keyword during run-time.
+
+11. Identify the corrected definition of a package.
+A. A package is a collection of editing tools
+B. A package is a collection of classes
+C. A package is a collection of classes and interfaces
+D. A package is a collection of interfaces
+Ans)A Package can be defined as a grouping of related types (classes, interfaces, enumerations and annotations ) providing access protection and namespace management.
+
+
+
+Q12.Identify the keyword among the following that makes a variable belong to a
+class,rather than being defined for each instance of the class.
+A. final
+B. static
+C. volatile
+D. abstract
+Ans)2. (B) Static keyword makes a variable belong to a class,rather than being defined for
+each instance of the class.
+
+
+Q13.Identify what can directly access and change the value of the variable res.
+Package com.mypackage;
+Public class Solution{
+Private int res = 100;
+}
+A. Any class
+B. Only Solution class
+C. Any class that extends Solution
+D. None
+Ans)(B) Only solution class can directly access and change the value of the variable res.
+
+
+
+
+Q14.In which of the following is the toString() method defined?
+A. java.lang.Object
+B. java.lang.String
+C. java.lang.util
+D. None
+Ans)The toString method is in the Object class, the parent class in java, so it's available in every class in java by default. 
+The method can be used on any object required to be represented in a String format.
+option A
+
+
+Q15.Identify the output of the following program.
+String str = “abcde”;
+System.out.println(str.substring(1, 3));
+A. abc
+B. bc
+C. bcd
+D. cd
+Ans)substring() method has two variants and returns a new string that is a substring of this string. The substring begins with the character at the specified index and extends to the end of this string or upto endIndex - 1 if second argument is given.
+Syntax: Here is the syntax of this method:
+public String substring(int beginIndex)
+or
+public String substring(int beginIndex, int endIndex)
+Parameters: Here is the detail of parameters:
+beginIndex -- the begin index, inclusive.
+endIndex -- the end index, exclus 
+bc is the option
+
+
